@@ -1,4 +1,4 @@
-class decode_in_sequence extends uvm_sequence#(.REQUEST(decode_in_transaction), .RESPONSE(decode_in_transaction));
+class decode_in_sequence extends uvm_sequence #(decode_in_transaction);// #(.REQUEST(decode_in_transaction), .RESPONSE(decode_in_transaction));
 
     decode_in_transaction Request;
     decode_in_transaction Response;

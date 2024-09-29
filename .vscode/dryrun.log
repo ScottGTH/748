@@ -1,5 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/ncsudrive/t/tyeh6/748/748'
-qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -l run.log top.sv -do "set IterationLimit 140000; set NoQuitOnFinish 1; " +UVM_TESTNAME=test_base -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top
 make: Leaving directory '/mnt/ncsudrive/t/tyeh6/748/748'
  
+make: *** No targets specified and no makefile found.  Stop.
+

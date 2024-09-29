@@ -26,7 +26,7 @@ class decode_in_agent extends uvm_agent;
         Coverage = new("decode_in_coverage", this);
       end
       
-      if(Confg.UVMState) begin
+      if(Confg.UVMState == UVM_ACTIVE) begin
         `uvm_info("AGENT", "agent configured as ACTIVE", UVM_MEDIUM);
         Driver = new("decode_in_driver", this);
         Sequencer = new("decode_in_sequencer", this);
@@ -43,10 +43,9 @@ class decode_in_agent extends uvm_agent;
 
         // analysisPort = Monitor.analysisPort;
 
-        if(Confg.UVMState)   Driver.seq_item_port.connect(Sequencer.seq_item_export);
-            //`uvm_info("AGENT", "driver connect successful", UVM_MEDIUM)
+        if(Confg.UVMState == UVM_ACTIVE)   Driver.seq_item_port.connect(Sequencer.seq_item_export);
         
-        if(Confg.enCoverage) Monitor.analysisPort.connect(Coverage.analysis_export);
+        if(Confg.enCoverage == UVM_ACTIVE) Monitor.analysisPort.connect(Coverage.analysis_export);
     endfunction
   
   endclass

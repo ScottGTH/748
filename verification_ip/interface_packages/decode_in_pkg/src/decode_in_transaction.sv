@@ -43,7 +43,7 @@ class decode_in_transaction extends uvm_sequence_item;
 
     virtual function string convert2string();
         // return {super.convert2string(), $sformatf("NPC input: 0x%h,  Instruction Output: 0x%h, %s", npc_in, instr_dout, Instr)};
-        return $sformatf("npc_in: 0x%x, instr_dout: 0x%b, Sr: 0x%b, en_decode: 0x%b", npc_in, instr_dout, Sr, en_decode);
+        return $sformatf("npc_in: 0x%x, instr_dout: 0x%b, %s", npc_in, instr_dout, Instr);
     endfunction
 
     function void post_randomize();
@@ -60,7 +60,7 @@ class decode_in_transaction extends uvm_sequence_item;
             STI:    instr_dout = {STI, Sr, pcOffset9};
             BR:     instr_dout = {BR, nzp, pcOffset9};
             JMP:    instr_dout = {JMP, 3'b000, baseR, 6'b000000};
-            default: `uvm_fatal("Transaction", "Invalid Instruction Type");
+            default: `uvm_fatal("Transaction", "Invalid Instruction Type")
         endcase
     endfunction
 

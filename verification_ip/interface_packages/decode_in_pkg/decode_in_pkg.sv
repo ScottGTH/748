@@ -6,10 +6,11 @@ package decode_in_pkg;
     `include "src/decode_in_transaction.sv"
     `include "src/decode_in_sequence.sv"
     `include "src/decode_in_sequence_radom.sv"
+
+    `include "src/decode_in_configuration.sv"
     `include "src/decode_in_monitor.sv"
     `include "src/decode_in_driver.sv"
     `include "src/decode_in_coverage.sv"
-    `include "src/decode_in_configuration.sv"
     `include "src/decode_in_agent.sv"
 
 

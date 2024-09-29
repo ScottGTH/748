@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep 15 17:49:19 2024
+# Make data base, printed on Sun Sep 29 00:56:13 2024
 
 # Variables
 
@@ -47,8 +47,8 @@ VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","
 _ = /usr/bin/make
 # environment
 QSYS_ROOTDIR = /mnt/ncsudrive/t/tyeh6/intelFPGA_lite/19.1/quartus/sopc_builder/bin
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+# makefile
+MAKEFILE_LIST := 
 # automatic
 @F = $(notdir $@)
 # environment
@@ -68,15 +68,17 @@ LMOD_FULL_SETTARG_SUPPORT = no
 # environment
 KRB5CCNAME = KEYRING:persistent:410282
 # environment
-SSH_CONNECTION = 10.136.30.131 50164 152.14.98.81 22
+SSH_CONNECTION = 10.136.31.33 50401 152.14.98.80 22
 # environment
 PATH = /mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/mnt/ncsudrive/t/tyeh6/.local/bin:/mnt/ncsudrive/t/tyeh6/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin
 # environment
 LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
 # environment
-VSCODE_CLI_REQUIRE_TOKEN = e416f430-bfe8-4977-bbce-f48d00367b46
+VSCODE_CLI_REQUIRE_TOKEN = ee81773f-e404-4a4f-9f8c-cc0e0b30c9c0
 # environment
 XDG_RUNTIME_DIR = /run/user/410282
+# environment
+FPATH = /usr/share/lmod/lmod/init/ksh_funcs:/usr/share/lmod/lmod/init/ksh_funcs
 # environment
 BASH_ENV = /usr/share/lmod/lmod/init/bash
 # environment
@@ -91,9 +93,9 @@ endef
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/410282/vscode-ipc-45269dc4-9522-4bf0-a031-d5f6c0248c37.sock
+VSCODE_IPC_HOOK_CLI = /run/user/410282/vscode-ipc-56811504-a3d8-41b4-bbce-b0092f09a7e8.sock
 # environment
-LMOD_VERSION = 8.7.32
+LMOD_VERSION = 8.7.48
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -129,7 +131,7 @@ LMOD_sys = Linux
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = grendel32.ece.ncsu.edu
+HOSTNAME = grendel31.ece.ncsu.edu
 # environment
 LMOD_arch = x86_64
 # environment
@@ -141,11 +143,11 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 1257
+XDG_SESSION_ID = 787
 # environment
 USER = tyeh6
 # makefile
-.DEFAULT_GOAL := run
+.DEFAULT_GOAL := 
 # environment
 LMOD_AVAIL_STYLE = grouped:system
 # environment
@@ -194,7 +196,7 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 10.136.30.131 50164 22
+SSH_CLIENT = 10.136.31.33 50401 22
 # environment
 MAIL = /var/spool/mail/tyeh6
 # automatic
@@ -246,7 +248,7 @@ LANG = C
 # environment
 which_declare = declare -f
 # variable set hash-table stats:
-# Load=96/1024=9%, Rehash=0, Collisions=13/121=11%
+# Load=97/1024=9%, Rehash=0, Collisions=13/119=11%
 
 # Pattern-specific Variable Values
 
@@ -254,9 +256,9 @@ which_declare = declare -f
 
 # Directories
 
-# . (device 51, inode 6915736422): 12 files, no impossibilities.
+# . (device 50, inode 6915736422): 7 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -274,9 +276,16 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-14 01:53:24.479426
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 
 # Not a target:
 .DEFAULT:
@@ -284,40 +293,27 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-run:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 3):
-	qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -l run.log top.sv -do "set IterationLimit 140000; set NoQuitOnFinish 1; " +UVM_TESTNAME=test_base -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top
-
-clean:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 7):
-	rm certe_dump.xml
-	rm design.bin
-	rm -rf qrun.out
-	rm -rf .visualizer
-	rm qwave.db
-	rm run.log
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 174 B / avg = 9 B
-# current buf: size = 8162 B / used = 174 B / count = 19 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 145 B / avg = 9 B
+# current buf: size = 8162 B / used = 145 B / count = 15 / avg = 9 B
 
-# strcache performance: lookups = 25 / hit rate = 24%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
- 
-# Load=19/8192=0%, Rehash=0, Collisions=2/25=8%
-# Finished Make data base on Sun Sep 15 17:49:19 2024
+# Load=15/8192=0%, Rehash=0, Collisions=2/18=11%
+# Finished Make data base on Sun Sep 29 00:56:13 2024
 
  
