@@ -15,6 +15,7 @@ class test_top extends uvm_test;
   uvm_active_passive_enum interface_activity[] = {UVM_ACTIVE,UVM_PASSIVE};
 
   bit enCoverage = 1;
+  // bit strM = 0;
   bit transaction_viewing = 1;
 
   virtual decode_in_if bus;
@@ -73,8 +74,10 @@ class test_top extends uvm_test;
     // @(posedge bus.clock);
     seqRand = new("sequence_random");
     decode_env.decodeInAgt.Confg.driver_bfm.driveEnable();
+    // strM = 1;
     
     repeat (50) seqRand.start(decode_env.decodeInAgt.Sequencer);
+    // strM = 0;
     
     decode_env.decodeInAgt.Confg.driver_bfm.driveDisable();
     @(posedge bus.clock);

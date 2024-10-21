@@ -1,0 +1,170 @@
+vlog -sv +incdir+../rtl/verilog ../rtl/verilog/Decode_Pipelined.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:24 on Oct 21,2024
+vlog -sv "+incdir+../rtl/verilog" ../rtl/verilog/Decode_Pipelined.v 
+-- Compiling module Decode
+
+Top level modules:
+	Decode
+End time: 06:49:25 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../../../verification_ip/para_type_pkg ../../../verification_ip/para_type_pkg/para_type_pkg.sv
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:25 on Oct 21,2024
+vlog -sv "+incdir+../../../verification_ip/para_type_pkg" ../../../verification_ip/para_type_pkg/para_type_pkg.sv 
+-- Compiling package para_type_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) ../../../verification_ip/para_type_pkg/para_type_pkg.sv(3): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 06:49:26 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../../../verification_ip/environment_packages/lc3_prediction_pkg \
+../../../verification_ip/environment_packages/lc3_prediction_pkg/lc3_prediction_pkg.sv \
+
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:26 on Oct 21,2024
+vlog -sv "+incdir+../../../verification_ip/environment_packages/lc3_prediction_pkg" ../../../verification_ip/environment_packages/lc3_prediction_pkg/lc3_prediction_pkg.sv 
+-- Compiling package lc3_prediction_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+
+Top level modules:
+	--none--
+End time: 06:49:27 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../../../verification_ip/interface_packages/decode_in_pkg \
+../../../verification_ip/interface_packages/decode_in_pkg/decode_in_pkg.sv \
+../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_if.sv \
+../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_driver_bfm.sv \
+../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_monitor_bfm.sv 
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:27 on Oct 21,2024
+vlog -sv "+incdir+../../../verification_ip/interface_packages/decode_in_pkg" ../../../verification_ip/interface_packages/decode_in_pkg/decode_in_pkg.sv ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_if.sv ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_driver_bfm.sv ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_monitor_bfm.sv 
+-- Compiling package decode_in_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package para_type_pkg
+** Note: (vlog-2286) ../../../verification_ip/interface_packages/decode_in_pkg/decode_in_pkg.sv(4): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling interface decode_in_if
+-- Compiling package decode_in_driver_bfm_sv_unit
+-- Importing package decode_in_pkg
+-- Compiling interface decode_in_driver_bfm
+-- Compiling package decode_in_monitor_bfm_sv_unit
+-- Compiling interface decode_in_monitor_bfm
+
+Top level modules:
+	--none--
+End time: 06:49:28 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../../../verification_ip/interface_packages/decode_out_pkg \
+../../../verification_ip/interface_packages/decode_out_pkg/decode_out_pkg.sv \
+../../../verification_ip/interface_packages/decode_out_pkg/src/decode_out_if.sv \
+../../../verification_ip/interface_packages/decode_out_pkg/src/decode_out_monitor_bfm.sv 
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:28 on Oct 21,2024
+vlog -sv "+incdir+../../../verification_ip/interface_packages/decode_out_pkg" ../../../verification_ip/interface_packages/decode_out_pkg/decode_out_pkg.sv ../../../verification_ip/interface_packages/decode_out_pkg/src/decode_out_if.sv ../../../verification_ip/interface_packages/decode_out_pkg/src/decode_out_monitor_bfm.sv 
+-- Compiling package decode_out_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package para_type_pkg
+** Note: (vlog-2286) ../../../verification_ip/interface_packages/decode_out_pkg/decode_out_pkg.sv(6): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling interface decode_out_if
+-- Compiling package decode_out_monitor_bfm_sv_unit
+-- Importing package decode_out_pkg
+-- Compiling interface decode_out_monitor_bfm
+
+Top level modules:
+	--none--
+End time: 06:49:30 on Oct 21,2024, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../../../verification_ip/environment_packages/decode_env_pkg \
+../../../verification_ip/environment_packages/decode_env_pkg/decode_env_pkg.sv \
+
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:30 on Oct 21,2024
+vlog -sv "+incdir+../../../verification_ip/environment_packages/decode_env_pkg" ../../../verification_ip/environment_packages/decode_env_pkg/decode_env_pkg.sv 
+-- Compiling package decode_env_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package mtiUvm.questa_uvm_pkg
+-- Importing package decode_in_pkg
+-- Importing package para_type_pkg
+-- Importing package decode_out_pkg
+-- Importing package lc3_prediction_pkg
+** Note: (vlog-2286) ../../../verification_ip/environment_packages/decode_env_pkg/decode_env_pkg.sv(14): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 06:49:31 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv +incdir+../tb/tests ../tb/tests/decode_test_pkg/decode_test_pkg.sv
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:31 on Oct 21,2024
+vlog -sv "+incdir+../tb/tests" ../tb/tests/decode_test_pkg/decode_test_pkg.sv 
+-- Compiling package decode_test_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package decode_in_pkg
+-- Importing package para_type_pkg
+-- Importing package decode_out_pkg
+-- Importing package decode_env_pkg
+-- Importing package mtiUvm.questa_uvm_pkg
+-- Importing package lc3_prediction_pkg
+** Note: (vlog-2286) ../tb/tests/decode_test_pkg/decode_test_pkg.sv(9): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	--none--
+End time: 06:49:32 on Oct 21,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv ../tb/testbench/hdl_top.sv ../tb/testbench/hvl_top.sv 
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:32 on Oct 21,2024
+vlog -sv ../tb/testbench/hdl_top.sv ../tb/testbench/hvl_top.sv 
+** Note: (vlog-2286) ../tb/testbench/hdl_top.sv(2): Using implicit +incdir+/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling package hdl_top_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package decode_in_pkg
+-- Importing package para_type_pkg
+-- Importing package decode_out_pkg
+-- Importing package decode_test_pkg
+-- Importing package decode_env_pkg
+-- Importing package mtiUvm.questa_uvm_pkg
+-- Importing package lc3_prediction_pkg
+-- Compiling module hdl_top
+-- Compiling package hvl_top_sv_unit
+-- Compiling module hvl_top
+
+Top level modules:
+	hdl_top
+	hvl_top
+End time: 06:49:34 on Oct 21,2024, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+vopt hdl_top hvl_top -o hvl_top_opt +designfile=design.bin -debug,livesim
+QuestaSim vopt 2023.2_1 Compiler 2023.05 May 12 2023
+Start time: 06:49:34 on Oct 21,2024
+vopt hdl_top hvl_top -o hvl_top_opt "+designfile=design.bin" -debug,livesim 
+
+Top level modules:
+	hdl_top
+	hvl_top
+
+Analyzing design...
+-- Loading module hdl_top
+-- Loading module hvl_top
+-- Loading interface decode_in_monitor_bfm
+-- Loading interface decode_in_driver_bfm
+-- Loading interface decode_out_monitor_bfm
+-- Loading interface decode_in_if
+-- Loading interface decode_out_if
+-- Loading module Decode
+Incremental compilation check found no design-units have changed.
+viscom:
+VISCOM: Start time: 06:49:36 on Oct 21,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/linux/VisualizerRls/bin/viscom 2023.2_1 at 2023.05 May 12 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 06:49:36 on Oct 21,2024, Elapsed time: 0:00:02 (Process Size : 168MB)
+
+
+Optimized design name is hvl_top_opt
+End time: 06:49:39 on Oct 21,2024, Elapsed time: 0:00:05
+Errors: 0, Warnings: 0
+vsim hvl_top_opt -sv_seed 1 +UVM_TESTNAME=test_top +UVM_VERBOSITY=UVM_HIGH +notimingchecks -suppress 8887 -visualizer=design.bin -qwavedb=+signal+memory+class+transaction -classdebug -uvmcontrol=all -do "set NoQuitOnFinish 1;onbreak {resume}; run -all; do wave.do; coverage save test_top.ucdb;" 

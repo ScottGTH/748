@@ -29,11 +29,11 @@ class decode_environment extends uvm_env;
     virtual function void connect_phase(uvm_phase phase);
         super.connect_phase(phase);
         // Connects decode_in agent to predictor
-        decodeInAgt.monitored_ap.connect(decodePred.analysis_export);
+        decodeInAgt.Monitor.monitored_ap.connect(decodePred.analysis_export);
         // Connects predictor to scoreboard
         decodePred.decodePredAP.connect(decodeSCB.exp);
         // Connects decode_out agent to scoreboard
-        decodeOutAgt.monitored_ap.connect(decodeSCB.act);
+        decodeOutAgt.Monitor.monitored_ap.connect(decodeSCB.act);
     endfunction
 
 endclass

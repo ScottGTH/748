@@ -5,7 +5,7 @@ class decode_out_agent  extends uvm_agent;
   decode_out_monitor       Monitor;
   decode_out_transaction_coverage      Coverage;
 
-  uvm_analysis_port #(decode_out_transaction) monitored_ap;
+  // uvm_analysis_port #(decode_out_transaction) monitored_ap;
 
   function new( string name = "decode_out_agent", uvm_component parent = null );
     super.new( name, parent );
@@ -24,7 +24,7 @@ class decode_out_agent  extends uvm_agent;
     Monitor = new("decode_out_monitor", this);
     Monitor.monitor_bfm = Confg.monitor_bfm;
 
-    monitored_ap = new("monitored_ap", this);
+    // monitored_ap = new("monitored_ap", this);
 
     if(Confg.enCoverage) begin
       Coverage = new("decode_out_coverage", this);

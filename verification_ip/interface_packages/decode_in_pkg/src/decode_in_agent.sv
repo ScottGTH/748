@@ -9,7 +9,7 @@ class decode_in_agent extends uvm_agent;
     decode_in_coverage      Coverage;
     uvm_sequencer #(decode_in_transaction) Sequencer;
 
-    uvm_analysis_port #(decode_in_transaction) monitored_ap;
+    // uvm_analysis_port #(decode_in_transaction) monitored_ap;
   
     function new(string name = "decode_in_agent", uvm_component parent = null);
       super.new(name, parent);
@@ -29,7 +29,7 @@ class decode_in_agent extends uvm_agent;
       Monitor = new("decode_in_monitor", this);
       Monitor.monitor_bfm = Confg.monitor_bfm;
 
-      monitored_ap = new("monitored_ap", this);
+      // monitored_ap = new("monitored_ap", this);
 
       if(Confg.enCoverage) begin
         Coverage = new("decode_in_coverage", this);

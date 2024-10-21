@@ -16,6 +16,10 @@ interface decode_out_monitor_bfm(decode_out_if bus);
       Mem_control_i = bus.Mem_control_i;
   endtask
 
+    // task do_wait_for_posedge();                                                          
+    //     @(posedge bus.clock) ;                                                                             
+    // endtask 
+
   initial begin
       while(bus.reset == 1'b1);
       repeat(7) @(posedge bus.clock);
@@ -29,9 +33,7 @@ interface decode_out_monitor_bfm(decode_out_if bus);
           do_monitor(npcInBfm, instrDoutBfm, E_control_i, W_control_i, Mem_control_i);
           proxy.notify_transaction(npcInBfm, instrDoutBfm, E_control_i, W_control_i, Mem_control_i);
       end
+      @(posedge bus.clock);
   end
 
 endinterface
-
-// pragma uvmf custom external begin
-// pragma uvmf custom external end

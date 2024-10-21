@@ -38,6 +38,11 @@
                  analysisPort 
                  <connection>  uvm_test_top.env.decodeInAgt.decode_in_coverage.analysis_imp  </connection> 
               </port> 
+  
+              <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
+                 monitored_ap 
+                 <connection>  uvm_test_top.env.decodePred.analysis_imp  </connection> 
+              </port> 
            </instance> 
   
   
@@ -54,11 +59,6 @@
               </imp> 
            </instance> 
   
-  
-           <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
-              monitored_ap 
-              <connection>  uvm_test_top.env.decodePred.analysis_imp  </connection> 
-           </port> 
         </instance> 
   
   
@@ -80,13 +80,13 @@
               <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
                  analysisPort 
               </port> 
+  
+              <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
+                 monitored_ap 
+                 <connection>  uvm_test_top.env.decodeSCB.act  </connection> 
+              </port> 
            </instance> 
   
-  
-           <port if_type = "uvm_analysis_port" txn_type = "anonymous"> 
-              monitored_ap 
-              <connection>  uvm_test_top.env.decodeSCB.act  </connection> 
-           </port> 
         </instance> 
   
   

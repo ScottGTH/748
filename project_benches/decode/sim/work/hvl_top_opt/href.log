@@ -1,10 +1,13 @@
+BEGIN 3:decode_in_if:fast__1:work
+    clock :  1:decode_test_pkg:fast:work
+END 
 BEGIN 3:decode_in_if:fast__2:work
+    npc_in :  1:hdl_top:fast:work 3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
+    en_decode :  1:hdl_top:fast:work 3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
     instr_dout :  1:hdl_top:fast:work 3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
     clock :  3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
     reset :  3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
     Sr :  3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
-    npc_in :  1:hdl_top:fast:work 3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
-    en_decode :  1:hdl_top:fast:work 3:decode_in_monitor_bfm:fast__3:work 3:decode_in_driver_bfm:fast__3:work
 END 
 BEGIN 3:decode_out_if:fast__1:work
     reset :  3:decode_out_monitor_bfm:fast__3:work
@@ -14,7 +17,4 @@ BEGIN 3:decode_out_if:fast__1:work
     Mem_control_i :  1:hdl_top:fast:work 3:decode_out_monitor_bfm:fast__3:work
     E_control_i :  1:hdl_top:fast:work 3:decode_out_monitor_bfm:fast__3:work
     W_control_i :  1:hdl_top:fast:work 3:decode_out_monitor_bfm:fast__3:work
-END 
-BEGIN 3:decode_in_if:fast__1:work
-    clock :  1:decode_test_pkg:fast:work
 END 

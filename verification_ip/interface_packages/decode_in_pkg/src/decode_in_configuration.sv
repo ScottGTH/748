@@ -16,9 +16,9 @@ class decode_in_configuration extends uvm_object;
         monitor_bfm.wait_for_reset();
     endtask
 
-    virtual task wait_for_num_clocks(int clocks);
-        monitor_bfm.wait_for_num_clocks(clocks);
-    endtask
+    // virtual task wait_for_num_clocks(int clocks);
+    //     monitor_bfm.wait_for_num_clocks(clocks);
+    // endtask
 
     virtual function void initialize(uvm_active_passive_enum activity,string agent_path,string interface_name);
         // super.initialize(activity, agent_path, interface_name);

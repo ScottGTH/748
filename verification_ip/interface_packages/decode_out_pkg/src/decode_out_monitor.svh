@@ -7,7 +7,7 @@ class decode_out_monitor  extends uvm_monitor;
 
   uvm_analysis_port #(decode_out_transaction) analysisPort;
 
-  // uvm_analysis_port #(decode_out_transaction) monitored_ap;
+  uvm_analysis_port #(decode_out_transaction) monitored_ap;
   
   decode_out_configuration Confg;
 
@@ -22,6 +22,7 @@ class decode_out_monitor  extends uvm_monitor;
   virtual function void build_phase(uvm_phase phase);
     // super.build_phase(phase);
     analysisPort = new("analysisPort", this);
+    monitored_ap = new("monitored_ap", this);
     if(!uvm_config_db #(decode_out_configuration)::get(null, "*", "out_bfm", Confg)) begin
         `uvm_fatal("FATAL MSG", "Configuration is not properly set")
     end
@@ -66,7 +67,7 @@ class decode_out_monitor  extends uvm_monitor;
       if(Confg.transaction_viewing)
         trans.add_to_wave(transaction_viewing_stream);
       // analysisPort.write(trans);
-      // monitored_ap.write(trans);
-endfunction
+      monitored_ap.write(trans);
+  endfunction
 endclass
 

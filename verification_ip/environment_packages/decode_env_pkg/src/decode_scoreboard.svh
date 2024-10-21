@@ -70,8 +70,8 @@ class decode_scoreboard extends uvm_component;
         exp = new("exp", this);
         act = new("act", this);
 
-        expReaultTemp = new();
-    	expReaultQue.push_back(expReaultTemp);
+        // expReaultTemp = new();
+    	// expReaultQue.push_back(expReaultTemp);
     endfunction
 
     virtual function void check_phase(uvm_phase phase);
@@ -86,9 +86,7 @@ class decode_scoreboard extends uvm_component;
 
     virtual task wait_for_scoreboard_drain();
 		
-		while(expReaultQue.size() != 0) begin
-			@receiveEntry;
-		end
+		@receiveEntry;
 		
 	endtask
 	
@@ -104,6 +102,8 @@ class decode_scoreboard extends uvm_component;
 					phase.drop_objection(this, "finish waiting for scoreboard being empty");
 				end
 			join_none
+            // wait_for_scoreboard_drain();
+            // phase.drop_objection(this, "finish waiting for scoreboard being empty");
 		end
 		
 	endfunction

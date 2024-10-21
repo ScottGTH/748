@@ -37,7 +37,7 @@ interface decode_in_monitor_bfm(decode_in_if bus);
 
     initial begin
         @go;
-        // repeat(7) @(posedge bus.clock);
+        repeat(6) @(posedge bus.clock);
         forever begin
             bit [15:0] instrDoutBfm;
             bit [15:0] npcInBfm;

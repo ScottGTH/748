@@ -1,0 +1,13 @@
+# Current time Mon Oct 21 07:35:03 2024
+# Program = hdlserver
+# Id = "2023.2_1"
+# Version = "2023.05"
+# Date = "May 12 2023"
+# Platform = "linux_x86_64"
+# Signature = 54e856c69948791e274cd82c628f09a0
+# lib_addresses = libc.so.6=0x00007fffde005000
+# End of Stack Trace
+
+#  0 0x00007fffde1386cb '<unknown (@0x7fffde1386cb)>'
+#  1 0x00007fffde096cdc '<unknown (@0x7fffde096cdc)>'
+#  2 0x00007fffde08a98f '<unknown (@0x7fffde08a98f)>'
