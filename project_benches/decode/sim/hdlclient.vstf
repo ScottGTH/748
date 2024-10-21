@@ -1,0 +1,27 @@
+# Current time Mon Oct 21 09:58:06 2024
+# Program = hdlclient
+# Id = "2023.2_1"
+# Version = "2023.05"
+# Date = "May 12 2023"
+# Platform = "linux_x86_64"
+# Signature = fe6a3264421f8d10bbcdb4b548f1f436
+# lib_addresses = libpthread.so.0=0x00007ffff2df5000,libxcb.so.1=0x00007ffff095c000,libxkbcommon-x11.so.0=0x00007ffff0755000,libQt5XcbQpa.so.5=0x00007ffff4013000,libqxcb.so=0x00007fffeedd1000,libQt5Gui.so.5=0x00007ffff55e2000,libQt5Core.so.5=0x00007ffff63f8000,libQt5Widgets.so.5=0x00007ffff42fd000
+# End of Stack Trace
+
+#  0 0x00007ffff2e0347c '<unknown (@0x7ffff2e0347c)>'
+#  1 0x00007ffff0968069 '<unknown (@0x7ffff0968069)>'
+#  2 0x00007ffff09696c7 '<unknown (@0x7ffff09696c7)>'
+#  3 0x00007ffff09697b1 '<unknown (@0x7ffff09697b1)>'
+#  4 0x00007ffff0759a47 '<unknown (@0x7ffff0759a47)>'
+#  5 0x00007ffff07590a8 '<unknown (@0x7ffff07590a8)>'
+#  6 0x00007ffff404eb52 '<unknown (@0x7ffff404eb52)>'
+#  7 0x00007ffff404eea0 '<unknown (@0x7ffff404eea0)>'
+#  8 0x00007ffff4048905 '<unknown (@0x7ffff4048905)>'
+#  9 0x00007ffff404c5cc '<unknown (@0x7ffff404c5cc)>'
+# 10 0x00007fffeedd273d '<unknown (@0x7fffeedd273d)>'
+# 11 0x00007ffff5733f2b '<unknown (@0x7ffff5733f2b)>'
+# 12 0x00007ffff5740e9c '<unknown (@0x7ffff5740e9c)>'
+# 13 0x00007ffff5741ebd '<unknown (@0x7ffff5741ebd)>'
+# 14 0x00007ffff66c6823 '<unknown (@0x7ffff66c6823)>'
+# 15 0x00007ffff57448ac '<unknown (@0x7ffff57448ac)>'
+# 16 0x00007ffff4487ec9 '<unknown (@0x7ffff4487ec9)>'

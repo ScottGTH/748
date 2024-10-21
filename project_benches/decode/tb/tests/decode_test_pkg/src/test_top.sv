@@ -78,9 +78,10 @@ class test_top extends uvm_test;
     
     repeat (50) seqRand.start(decode_env.decodeInAgt.Sequencer);
     // strM = 0;
-    
-    decode_env.decodeInAgt.Confg.driver_bfm.driveDisable();
     @(posedge bus.clock);
+    decode_env.decodeInAgt.Confg.driver_bfm.driveDisable();
+    
+    
     phase.drop_objection(this, "Objection dropped by test_base");
     `uvm_info("INFO", "test_top run phase complete", UVM_LOW);
   endtask

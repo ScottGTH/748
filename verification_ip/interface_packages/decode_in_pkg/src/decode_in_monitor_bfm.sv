@@ -43,7 +43,7 @@ interface decode_in_monitor_bfm(decode_in_if bus);
             bit [15:0] npcInBfm;
             bit [2:0]  srBfm;
             bit        enDecodeBfm;
-            @(posedge clock_i);
+            @(posedge clock_i iff bus.en_decode === 1'b1);
             do_monitor(npcInBfm, instrDoutBfm, srBfm, enDecodeBfm);
             proxy.notify_transaction(npcInBfm, instrDoutBfm, srBfm, enDecodeBfm);
         end

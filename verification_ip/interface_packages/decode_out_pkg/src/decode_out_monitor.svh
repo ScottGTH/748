@@ -44,7 +44,11 @@ class decode_out_monitor  extends uvm_monitor;
 //   virtual task run_phase(uvm_phase phase);                                                                                                                        
 //     wait(monitor_bfm.bus.reset);
 //     @(posedge monitor_bfm.bus.clock);  ->monitor_bfm.go;                                                 
-//   endtask                                                                                    
+//   endtask     
+  
+  virtual task run_phase(uvm_phase phase);
+    monitor_bfm.start_monitoring();
+  endtask
 
 
   virtual function void notify_transaction( input bit [15:0] instrDoutBfm, input bit [15:0] npcInBfm, 

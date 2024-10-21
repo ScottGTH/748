@@ -20,7 +20,7 @@ class decode_scoreboard extends uvm_component;
     // int index;
     bit activity = 0;
 
-    bit wait_to_scbd_empty = 0;
+    bit wait_to_scbd_empty = 1;
 
     bit end_of_test_empty_check = 1'b1;
 	bit end_of_test_activity_check = 1'b1;
@@ -86,7 +86,12 @@ class decode_scoreboard extends uvm_component;
 
     virtual task wait_for_scoreboard_drain();
 		
-		@receiveEntry;
+		if(expReaultQue.size() == 0) begin
+            return;
+        end
+        else begin
+            @receiveEntry;
+        end
 		
 	endtask
 	

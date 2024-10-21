@@ -5,7 +5,7 @@
 
 # vsim hvl_top_opt -sv_seed 1 +UVM_TESTNAME=test_top +UVM_VERBOSITY=UVM_HIGH +notimingchecks -suppress 8887 -visualizer=design.bin -qwavedb=+signal+memory+class+transaction -classdebug -uvmcontrol=all -do {set NoQuitOnFinish 1;onbreak {resume}; run -all; do wave.do; coverage save test_top.ucdb;}
 # vsim hvl_top_opt -sv_seed 1 "+UVM_TESTNAME=test_top" "+UVM_VERBOSITY=UVM_HIGH" "+notimingchecks" -suppress 8887 -visualizer=design.bin -qwavedb=+livesim+signal+memory+class+transaction -classdebug -uvmcontrol=all "+no_qwavedb_threading" 
-# Start time: 09:49:27 on Oct 21,2024
+# Start time: 13:22:13 on Oct 21,2024
 # Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/bin/../linux/VisualizerRls/bin/libqvisualizer.so'
 # //  Questa Sim
 # //  Version 2023.2_1 linux May 12 2023
@@ -56,11 +56,11 @@
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'npc_in'. The port definition is at: ../../../verification_ip/interface_packages/decode_out_pkg/src/decode_out_if.sv(10).
 #    Time: 0 ns  Iteration: 0  Instance: /hdl_top/decodeOutInterface File: ../tb/testbench/hdl_top.sv Line: 37
 # Loading /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/uvm-1.1d/linux/uvm_dpi.so
-# Opening log file /tmp/visscratch.58arKt/hdloffice.log
+# Opening log file /tmp/visscratch.LEJtPN/hdloffice.log
 
-# 09:49:33: Loading design data...
-# 09:49:33: Loaded  design units
-# 09:49:33: Loaded  design hierarchy
+# 13:22:19: Loading design data...
+# 13:22:19: Loaded  design units
+# 13:22:19: Loaded  design hierarchy
 # Warning: The wave file cannot be loaded because either the simulation has not yet logged any data, or qwavedb logging has not been enabled.
 # 	 Class Filter File used = /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/bin/../linux/VisualizerRls/bin/../config/uvmclassfilter.txt
 # set NoQuitOnFinish 1
@@ -321,51 +321,52 @@
 # UVM_INFO ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_sequence_radom.sv(13) @ 545: uvm_test_top.env.decodeInAgt.decode_in_sequencer@@sequence_random [SEQUENCE] Sending transaction to Driver: npc_in: 0x3000, instr_dout: 0x1110001101100110, LEA
 # UVM_INFO ../../../verification_ip/environment_packages/decode_env_pkg/src/decode_scoreboard.svh(58) @ 555: uvm_test_top.env.decodeSCB [COMPARISON] transaction MATCHED: Correct Predictioin
 # UVM_INFO ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_coverage.sv(40) @ 555: uvm_test_top.env.decodeInAgt.decode_in_coverage [COVERAGE] Transaction Received
-# UVM_INFO ../tb/tests/decode_test_pkg/src/test_top.sv(85) @ 565: uvm_test_top [INFO] test_top run phase complete
+# UVM_INFO ../tb/tests/decode_test_pkg/src/test_top.sv(86) @ 565: uvm_test_top [INFO] test_top run phase complete
 # UVM_INFO ../../../verification_ip/environment_packages/decode_env_pkg/src/decode_scoreboard.svh(58) @ 565: uvm_test_top.env.decodeSCB [COMPARISON] transaction MATCHED: Correct Predictioin
 # UVM_INFO ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_coverage.sv(40) @ 565: uvm_test_top.env.decodeInAgt.decode_in_coverage [COVERAGE] Transaction Received
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 565: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_ERROR ../../../verification_ip/environment_packages/decode_env_pkg/src/decode_scoreboard.svh(81) @ 565: uvm_test_top.env.decodeSCB [EMPTY_CHECK] transactions queue not empty at the end
-# UVM_INFO @ 565: uvm_test_top.env.decodeSCB [SCOREBOARD] Expected Transactions Received Number:          50
-# UVM_INFO @ 565: uvm_test_top.env.decodeSCB [SCOREBOARD] Matched Comparisons:          49
-# UVM_INFO @ 565: uvm_test_top.env.decodeSCB [SCOREBOARD] Unsmatched Comparisons:           0
-# UVM_INFO @ 565: uvm_test_top.env.decodeSCB [SCOREBOARD] Comparisons Count:          49
+# UVM_INFO ../../../verification_ip/environment_packages/decode_env_pkg/src/decode_scoreboard.svh(58) @ 575: uvm_test_top.env.decodeSCB [COMPARISON] transaction MATCHED: Correct Predictioin
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 575: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 575: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 575: uvm_test_top.env.decodeSCB [SCOREBOARD] Expected Transactions Received Number:          50
+# UVM_INFO @ 575: uvm_test_top.env.decodeSCB [SCOREBOARD] Matched Comparisons:          50
+# UVM_INFO @ 575: uvm_test_top.env.decodeSCB [SCOREBOARD] Unsmatched Comparisons:           0
+# UVM_INFO @ 575: uvm_test_top.env.decodeSCB [SCOREBOARD] Comparisons Count:          50
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :  214
+# UVM_INFO :  217
 # UVM_WARNING :    0
-# UVM_ERROR :    1
+# UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [AGENT]     1
-# [COMPARISON]    49
+# [COMPARISON]    50
 # [COVERAGE]    50
-# [EMPTY_CHECK]     1
 # [INFO]     5
 # [Questa UVM]     3
 # [RNTST]     1
 # [SCOREBOARD]     4
 # [SEQUENCE]   100
-# [TEST_DONE]     1
+# [TEST_DONE]     3
 # ** Note: $finish    : /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 565 ns  Iteration: 55  Instance: .hvl_top
+#    Time: 575 ns  Iteration: 63  Instance: .hvl_top
 # Stopped at /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # 1
 # Break in Task uvm_root::run_test at /mnt/apps/public/COE/mg_apps/questa2023.2/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# 09:49:47: Loading waveform header...
-# 09:49:47: Loaded  waveform header
+# 13:22:38: Loading waveform header...
+# 13:22:38: Loaded  waveform header
 
 # do wave.do
 
 # coverage save test_top.ucdb
 
 # Window layout 'Default' saved in file: /mnt/ncsudrive/t/tyeh6/.visualizer/layout.xml
-# qwavedb_dumpvars : Simulation ending at [0 565] 0
-# End time: 09:55:09 on Oct 21,2024, Elapsed time: 0:05:42
+# qwavedb_dumpvars : Simulation ending at [0 575] 0
+# End time: 13:25:06 on Oct 21,2024, Elapsed time: 0:02:53
 # Errors: 0, Warnings: 4
-# Start  : Mon 21 Oct 2024 09:49:01 AM EDT
-# End    : Mon 21 Oct 2024 09:55:09 AM EDT
-# VMSize : 1362092 kB
-# VMPeak : 1362092 kB
+# Start  : Mon 21 Oct 2024 01:21:48 PM EDT
+# End    : Mon 21 Oct 2024 01:25:06 PM EDT
+# VMSize : 1361804 kB
+# VMPeak : 1421300 kB

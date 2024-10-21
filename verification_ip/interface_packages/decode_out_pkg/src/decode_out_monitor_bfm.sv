@@ -5,6 +5,8 @@ interface decode_out_monitor_bfm(decode_out_if bus);
 
   decode_out_monitor proxy;
 
+  event go;
+
   task do_monitor(output bit [15:0] instrDoutBfm, output bit [15:0] npcInBfm, 
                   output bit [5:0]  E_control_i, bit [1:0]  W_control_i,
                   output bit Mem_control_i);
@@ -20,8 +22,12 @@ interface decode_out_monitor_bfm(decode_out_if bus);
     //     @(posedge bus.clock) ;                                                                             
     // endtask 
 
+  function void start_monitoring();   
+    -> go;
+  endfunction 
+
   initial begin
-      while(bus.reset == 1'b1);
+      @go;
       repeat(7) @(posedge bus.clock);
       forever begin
           bit [15:0] instrDoutBfm;
