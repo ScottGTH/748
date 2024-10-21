@@ -1,39 +1,39 @@
 <!-- THIS IS TOOL GENERATED SESSION FILE. PLEASE DO NOT MODIFY THIS -->
 <!DOCTYPE visualizer_session>
-<session version="3" skip_do_file="0">
+<session skip_do_file="0" version="3">
  <app argc="8">
-  <argv pos="0" value="vsim"/>
-  <argv pos="1" value="+UVM_TESTNAME=test_top"/>
-  <argv pos="2" value="+UVM_VERBOSITY=UVM_HIGH"/>
-  <argv pos="3" value="+notimingchecks"/>
-  <argv pos="4" value="design.bin"/>
-  <argv pos="5" value="-do"/>
-  <argv pos="6" value="set NoQuitOnFinish 1;onbreak {resume}; run -all; do wave.do; coverage save test_top.ucdb;"/>
-  <argv pos="7" value="+_sv_debug_+vsimhvl_top_opt-sv_seed1+UVM_TESTNAME=test_top+UVM_VERBOSITY=UVM_HIGH+notimingchecks-suppress8887-visualizer=design.bin-qwavedb=+signal+memory+class+transaction-classdebug-uvmcontrol=all"/>
+  <argv value="vsim" pos="0"/>
+  <argv value="+UVM_TESTNAME=test_top" pos="1"/>
+  <argv value="+UVM_VERBOSITY=UVM_HIGH" pos="2"/>
+  <argv value="+notimingchecks" pos="3"/>
+  <argv value="design.bin" pos="4"/>
+  <argv value="-do" pos="5"/>
+  <argv value="set NoQuitOnFinish 1;onbreak {resume}; run -all; do wave.do; coverage save test_top.ucdb;" pos="6"/>
+  <argv value="+_sv_debug_+vsimhvl_top_opt-sv_seed1+UVM_TESTNAME=test_top+UVM_VERBOSITY=UVM_HIGH+notimingchecks-suppress8887-visualizer=design.bin-qwavedb=+signal+memory+class+transaction-classdebug-uvmcontrol=all" pos="7"/>
  </app>
  <window_config>
-  <dockareas left="206" top="0" bottom="266" right="436"/>
-  <taborder left="files+structure+testbench+" bottom="transcript+" right="streams+"/>
-  <activetab left="testbench" bottom="transcript" right="streams"/>
-  <window visible="1" undocked="0" dock_location="left" type="files" x="0" y="0"/>
-  <window visible="1" undocked="0" dock_location="left" type="structure" x="0" y="0"/>
-  <window visible="1" undocked="0" dock_location="left" type="testbench" x="0" y="0"/>
-  <window visible="1" undocked="0" dock_location="right" type="streams" x="0" y="0"/>
-  <window visible="1" undocked="0" dock_location="bottom" type="transcript" x="0" y="0"/>
-  <window width="1280" visible="1" undocked="0" height="729" type="rtl" x="0" y="0"/>
-  <window width="1284" visible="1" undocked="1" height="781" dock_location="bottom" type="wave" x="0" y="0"/>
-  <window visible="0" path="/mnt/ncsudrive/t/tyeh6/748/748/project_benches/decode/tb/testbench/hdl_top.sv" undocked="0" dock_location="center" firstVisibleLine="5" type="source" x="0" y="0"/>
-  <window id="1" visible="1" path="/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh" undocked="0" dock_location="center" firstVisibleLine="422" type="source" x="0" y="0"/>
+  <dockareas left="206" right="436" top="0" bottom="266"/>
+  <taborder left="files+structure+testbench+" right="streams+" bottom="transcript+"/>
+  <activetab left="testbench" activewindow="transcript" right="streams" bottom="transcript"/>
+  <window x="0" visible="1" dock_location="left" type="files" undocked="0" y="0"/>
+  <window x="0" visible="1" dock_location="left" type="structure" undocked="0" y="0"/>
+  <window x="0" visible="1" dock_location="left" type="testbench" undocked="0" y="0"/>
+  <window x="0" visible="1" dock_location="right" type="streams" undocked="0" y="0"/>
+  <window x="0" visible="1" dock_location="bottom" type="transcript" undocked="0" y="0"/>
+  <window x="8" visible="1" type="rtl" undocked="0" height="729" width="1280" y="31"/>
+  <window x="8" visible="1" dock_location="bottom" type="wave" undocked="1" height="781" width="1284" y="31"/>
+  <window path="/mnt/ncsudrive/t/tyeh6/748/748/project_benches/decode/tb/testbench/hdl_top.sv" x="0" visible="0" dock_location="center" type="source" undocked="0" firstVisibleLine="6" y="0"/>
+  <window id="1" path="/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh" x="0" visible="1" dock_location="center" type="source" undocked="0" firstVisibleLine="422" y="0"/>
  </window_config>
  <wave_file_mgr>
-  <waveFile fileName="/mnt/ncsudrive/t/tyeh6/748/748/project_benches/decode/sim/qwave.db" waveType="0" tagName="F0"/>
+  <waveFile waveType="0" fileName="/mnt/ncsudrive/t/tyeh6/748/748/project_benches/decode/sim/qwave.db" tagName="F0"/>
  </wave_file_mgr>
  <gui>
   <main_window visible="1">
    <srcbrowser instancename="hdl_top" filepath="/mnt/ncsudrive/t/tyeh6/748/748/project_benches/decode/tb/testbench/hdl_top.sv"/>
    <sourcetclcommands>
     <tcl command="src activate source"/>
-    <tcl command="src top 6"/>
+    <tcl command="src top 7"/>
    </sourcetclcommands>
    <srcbrowser primary="true" filepath="/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh"/>
    <sourcetclcommands>
@@ -42,8 +42,8 @@
    </sourcetclcommands>
    <edge_gui cur_selection="AnyEdge"/>
   </main_window>
-  <watchTower_cur_setting curDisplayTimeUnit="0" curRadix="2" curActiveWaveFile="F0" customDisplayTimeUnitListStr="" curDisplayTimeUnitStr="1s">
-   <curTime lowtime="5000" hightime="0"/>
+  <watchTower_cur_setting curRadix="2" curDisplayTimeUnitStr="1s" customDisplayTimeUnitListStr="" curActiveWaveFile="F0" curDisplayTimeUnit="0">
+   <curTime hightime="0" lowtime="5000"/>
   </watchTower_cur_setting>
   <files/>
   <structure selection="hdl_top"/>
@@ -57,22 +57,22 @@
   </wave>
  </gui>
  <wave_mgr sync_time_range="0">
-  <waveWindow wintype="4" displayFileTag="1" valueWidth="83" value_tooltip="0" displayRadixWithValue="1" nameWidth="139" waveWidth="1017" displayLeadingZeros="0" primNudge="1" displayGlobalView="1" showMarkers="1" signalHeight="18" justifySignalPath="Right" displayGrid="0" displayTimeUnit="0" snapToEdge="1" swapRepresentationOfX="0" showSecCursor="1" displayScopeName="1" secNudge="1" trackViewToTime="1" displayTimeUnitStr="1s" alignBaseName="0">
+  <waveWindow displayLeadingZeros="0" valueWidth="83" trackViewToTime="1" displayGlobalView="1" displayTimeUnit="0" displayGrid="0" wintype="4" displayRadixWithValue="1" snapToEdge="1" swapRepresentationOfX="0" displayFileTag="1" secNudge="1" showSecCursor="1" justifySignalPath="Right" signalHeight="18" nameWidth="139" waveWidth="1017" alignBaseName="0" displayScopeName="1" primNudge="1" value_tooltip="0" showMarkers="1" displayTimeUnitStr="1s">
    <window name="Wave0">
     <timeunit value="2"/>
     <frequnit value="2"/>
     <showdiff value="0"/>
    </window>
    <viewPort>
-    <beginTime lowtime="0" hightime="0"/>
-    <endTime lowtime="555" hightime="0"/>
-    <beginViewTime lowtime="0" hightime="0"/>
-    <endViewTime lowtime="383" hightime="0"/>
-    <beginLastViewTime lowtime="0" hightime="0"/>
-    <endLastViewTime lowtime="383" hightime="0"/>
+    <beginTime hightime="0" lowtime="0"/>
+    <endTime hightime="0" lowtime="565"/>
+    <beginViewTime hightime="0" lowtime="0"/>
+    <endViewTime hightime="0" lowtime="383"/>
+    <beginLastViewTime hightime="0" lowtime="0"/>
+    <endLastViewTime hightime="0" lowtime="383"/>
    </viewPort>
-   <primCursor lowtime="5000" hightime="0"/>
-   <secCursor lowtime="0" hightime="0"/>
+   <primCursor hightime="0" lowtime="5000"/>
+   <secCursor hightime="0" lowtime="0"/>
    <wavetclcommands>
     <tcl command="onerror resume&#xa;wave update off&#xa;wave clearselection&#xa;"/>
     <tcl commandblock="custom radix definitions"></tcl>

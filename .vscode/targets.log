@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Sep 29 00:56:13 2024
+# Make data base, printed on Sun Oct 20 18:35:30 2024
 
 # Variables
 
@@ -42,7 +42,7 @@ SHELL = /bin/sh
 # environment
 LMOD_DIR = /usr/share/lmod/lmod/libexec
 # environment
-VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/out/nls.messages.json","locale":"en","availableLanguages":{}}
+VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-384ff7382de624fb94dbaf6da11977bba1ecd427/server/out/nls.messages.json","locale":"en","availableLanguages":{}}
 # environment
 _ = /usr/bin/make
 # environment
@@ -68,13 +68,13 @@ LMOD_FULL_SETTARG_SUPPORT = no
 # environment
 KRB5CCNAME = KEYRING:persistent:410282
 # environment
-SSH_CONNECTION = 10.136.31.33 50401 152.14.98.80 22
+SSH_CONNECTION = 10.136.36.73 49892 152.14.98.81 22
 # environment
-PATH = /mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/mnt/ncsudrive/t/tyeh6/.local/bin:/mnt/ncsudrive/t/tyeh6/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin
+PATH = /mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-384ff7382de624fb94dbaf6da11977bba1ecd427/server/bin/remote-cli:/mnt/ncsudrive/t/tyeh6/.local/bin:/mnt/ncsudrive/t/tyeh6/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin
 # environment
 LMOD_CMD = /usr/share/lmod/lmod/libexec/lmod
 # environment
-VSCODE_CLI_REQUIRE_TOKEN = ee81773f-e404-4a4f-9f8c-cc0e0b30c9c0
+VSCODE_CLI_REQUIRE_TOKEN = 7c5ad2d1-6a79-4b89-b2f5-a9c96803ffb4
 # environment
 XDG_RUNTIME_DIR = /run/user/410282
 # environment
@@ -93,7 +93,7 @@ endef
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /run/user/410282/vscode-ipc-56811504-a3d8-41b4-bbce-b0092f09a7e8.sock
+VSCODE_IPC_HOOK_CLI = /run/user/410282/vscode-ipc-68d10dab-bf44-4f7f-a5b5-4ec33e3c14bc.sock
 # environment
 LMOD_VERSION = 8.7.48
 # default
@@ -131,7 +131,7 @@ LMOD_sys = Linux
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = grendel31.ece.ncsu.edu
+HOSTNAME = grendel32.ece.ncsu.edu
 # environment
 LMOD_arch = x86_64
 # environment
@@ -143,7 +143,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 5
 # environment
-XDG_SESSION_ID = 787
+XDG_SESSION_ID = 1826
 # environment
 USER = tyeh6
 # makefile
@@ -196,13 +196,13 @@ MAKEFLAGS = pqrR
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_CLIENT = 10.136.31.33 50401 22
+SSH_CLIENT = 10.136.36.73 49892 22
 # environment
 MAIL = /var/spool/mail/tyeh6
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-BROWSER = /mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh
+BROWSER = /mnt/ncsudrive/t/tyeh6/.vscode-server/cli/servers/Stable-384ff7382de624fb94dbaf6da11977bba1ecd427/server/bin/helpers/browser.sh
 # environment
 define BASH_FUNC_which%%
 () {  ( alias;
@@ -256,7 +256,7 @@ which_declare = declare -f
 
 # Directories
 
-# . (device 50, inode 6915736422): 7 files, no impossibilities.
+# . (device 51, inode 6915736422): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -314,6 +314,6 @@ GNUmakefile:
 # strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=2/18=11%
-# Finished Make data base on Sun Sep 29 00:56:13 2024
+# Finished Make data base on Sun Oct 20 18:35:30 2024
 
  

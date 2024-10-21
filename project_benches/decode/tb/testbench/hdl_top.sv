@@ -1,6 +1,7 @@
 import uvm_pkg::*;
 `include "uvm_macros.svh"
 import decode_in_pkg::*;
+import decode_out_pkg::*;
 import decode_test_pkg::*;
 
 module hdl_top();
@@ -33,5 +34,22 @@ module hdl_top();
     decode_in_driver_bfm driverBfm(decodeInInterface);
     initial uvm_config_db#(virtual decode_in_driver_bfm)::set(null, "*", "decode_in_driver_bfm", driverBfm);
 
+    decode_out_if decodeOutInterface(.clock(clk), .reset(rst), .instr_dout(instr_dout), .npc_in(npc_in), .E_control_i(E_control_i), .Mem_control_i(Mem_control_i), .W_control_i(W_control_i));
+    initial uvm_config_db#(virtual decode_out_if)::set(null, "*", "decode_out_if", decodeOutInterface);
+    decode_out_monitor_bfm monitorBfmOut(decodeOutInterface);
+    initial uvm_config_db#(virtual decode_out_monitor_bfm)::set(null, "*", "decode_out_monitor_bfm", monitorBfmOut);
+
+    Decode DUT(
+      .clock(clk),
+  	  .reset(rst),
+  	  .enable_decode(decodeInInterface.en_decode),
+  	  .dout(decodeInInterface.instr_dout),
+  	  .npc_in(decodeInInterface.npc_in),
+  	 .W_Control(decodeOutInterface.W_control_i),
+  	 .Mem_Control(decodeOutInterface.Mem_control_i),
+  	 .E_Control(decodeOutInterface.E_control_i),
+  	 .IR(decodeOutInterface.instr_dout),
+  	 .npc_out(decodeOutInterface.npc_in)
+    );
 
 endmodule

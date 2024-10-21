@@ -7,6 +7,8 @@ class decode_in_monitor extends uvm_monitor;
     virtual decode_in_monitor_bfm monitor_bfm;
 
     uvm_analysis_port #(decode_in_transaction) analysisPort;
+
+    // uvm_analysis_port #(decode_in_transaction) monitored_ap;
     
     decode_in_configuration Confg;
 
@@ -21,7 +23,7 @@ class decode_in_monitor extends uvm_monitor;
     virtual function void build_phase(uvm_phase phase);
         // super.build_phase(phase);
         analysisPort = new("analysisPort", this);
-        if(!uvm_config_db #(decode_in_configuration)::get(null, "*", "decode_in_configuration", Confg)) begin
+        if(!uvm_config_db #(decode_in_configuration)::get(null, "*", "in_bfm", Confg)) begin
             `uvm_fatal("FATAL MSG", "Configuration is not properly set")
         end
         `uvm_info("INFO", "decode_in_monitor entered the build phase", UVM_LOW);
@@ -39,12 +41,9 @@ class decode_in_monitor extends uvm_monitor;
         monitor_bfm.proxy = this;
     endfunction
 
-    // virtual task run_phase(uvm_phase phase);
-    //     phase.raise_objection(this);
-    //         ->monitor_bfm.go;
-    //     phase.drop_objection(this);
-    //     `uvm_info("INFO", "decode_in_monitor entered the run phase", UVM_LOW);
-    // endtask
+    virtual task run_phase(uvm_phase phase);
+        monitor_bfm.start_monitoring();
+    endtask
 
     virtual function void notify_transaction(
         input logic[15:0] instr_dout,
@@ -69,6 +68,7 @@ class decode_in_monitor extends uvm_monitor;
           trans.add_to_wave(transaction_viewing_stream);
         //   `uvm_info("MONITOR_PROXY", t.convert2string(), UVM_HIGH);
         analysisPort.write(trans);
+        // monitored_ap.write(trans);
     endfunction
 
 endclass

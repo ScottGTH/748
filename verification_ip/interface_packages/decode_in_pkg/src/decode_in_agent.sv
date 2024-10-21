@@ -8,6 +8,8 @@ class decode_in_agent extends uvm_agent;
     decode_in_monitor       Monitor;
     decode_in_coverage      Coverage;
     uvm_sequencer #(decode_in_transaction) Sequencer;
+
+    uvm_analysis_port #(decode_in_transaction) monitored_ap;
   
     function new(string name = "decode_in_agent", uvm_component parent = null);
       super.new(name, parent);
@@ -18,9 +20,16 @@ class decode_in_agent extends uvm_agent;
       if(!uvm_config_db #(decode_in_configuration)::get(null, "*", "decode_in_configuration", Confg)) begin
         `uvm_fatal("decode_in_agent", "Configuration not set properlly");
       end
+
+      if(!uvm_config_db#(virtual decode_in_driver_bfm)::get(null, "*", "decode_in_driver_bfm", Confg.driver_bfm))
+      `uvm_fatal("test_top", "test_top config didn't get driver base functional model")
+      if(!uvm_config_db#(virtual decode_in_monitor_bfm)::get(null, "*", "decode_in_monitor_bfm", Confg.monitor_bfm))
+      `uvm_fatal("test_top", "test_top config didn't get monitor base functional model")
       
       Monitor = new("decode_in_monitor", this);
       Monitor.monitor_bfm = Confg.monitor_bfm;
+
+      monitored_ap = new("monitored_ap", this);
 
       if(Confg.enCoverage) begin
         Coverage = new("decode_in_coverage", this);

@@ -1,0 +1,56 @@
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/linux_x86_64/VisualizerRls'
+# USER = 'tyeh6'
+# Mentor Graphics software version 2023.2_1 (Build on May 12 2023)
+# Copyright (C) 1999-2024 by Mentor Graphics All rights reserved.
+
+# vsim hvl_top_opt -sv_seed 1 +UVM_TESTNAME=test_top +UVM_VERBOSITY=UVM_HIGH +notimingchecks -suppress 8887 -visualizer=design.bin -qwavedb=+signal+memory+class+transaction -classdebug -uvmcontrol=all -do {set NoQuitOnFinish 1;onbreak {resume}; run -all; do wave.do; coverage save test_top.ucdb;}
+# vsim hvl_top_opt -sv_seed 1 "+UVM_TESTNAME=test_top" "+UVM_VERBOSITY=UVM_HIGH" "+notimingchecks" -suppress 8887 -visualizer=design.bin -qwavedb=+livesim+signal+memory+class+transaction -classdebug -uvmcontrol=all "+no_qwavedb_threading" 
+# Start time: 06:31:23 on Oct 21,2024
+# Loading Mentor Graphics Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2023.2/questasim/bin/../linux/VisualizerRls/bin/libqvisualizer.so'
+# //  Questa Sim
+# //  Version 2023.2_1 linux May 12 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.decode_in_if(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.decode_out_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.lc3_prediction_pkg(fast)
+# Loading work.para_type_pkg(fast)
+# Loading work.decode_out_pkg(fast)
+# Loading work.decode_in_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.decode_env_pkg(fast)
+# Loading work.decode_test_pkg(fast)
+# Loading work.hdl_top_sv_unit(fast)
+# Loading work.hdl_top(fast)
+# Loading work.decode_in_if(fast__2)
+# Loading work.decode_in_monitor_bfm_sv_unit(fast)
+# Loading work.decode_in_monitor_bfm(fast__3)
+# Loading work.decode_in_driver_bfm_sv_unit(fast)
+# Loading work.decode_in_driver_bfm(fast__3)
+# Loading work.decode_out_if(fast__1)
+# Loading work.decode_out_monitor_bfm_sv_unit(fast)
+# Loading work.decode_out_monitor_bfm(fast__3)
+# Loading work.hvl_top_sv_unit(fast)
+# Loading work.hvl_top(fast)
+# ** Fatal: (vsim-8274) Virtual interface elem. 'wait_for_num_clocks' not found in 'decode_in_monitor_bfm'.
+#    Time: 0 ns  Iteration: 0  Region: /decode_in_pkg File: ../../../verification_ip/interface_packages/decode_in_pkg/src/decode_in_configuration.sv Line: 20
+# FATAL ERROR while loading design
+# Error loading design
+# Failed to load design.
+# End time: 06:31:34 on Oct 21,2024, Elapsed time: 0:00:11
+# Errors: 1, Warnings: 0
